@@ -100,7 +100,7 @@ header {
 /* Hero Section with Background Image & Animation */
 .hero {
   height: 100vh;
-  background: url('./abstract-hero.jpg') no-repeat center center/cover;
+  background: url('./public/abstract-hero.jpg') no-repeat center center/cover;
   position: relative;
   display: flex;
   align-items: center;
