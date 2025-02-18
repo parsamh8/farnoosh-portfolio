@@ -1,0 +1,367 @@
+/* Hot Dream Color Palette */
+:root {
+  --color1: #F923EF; /* Vivid Pink */
+  --color2: #FF81A9; /* Soft Pink */
+  --color3: #15006D; /* Deep Indigo */
+  --color4: #8E5AFF; /* Light Purple */
+}
+/* font palletts */
+#unique-font {
+  font-family: "Reenie Beanie", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#title-font {
+  font-family: "Amatic SC", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+#paragraph-font {
+  font-family: "Source Code Pro", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#paragraph-font-footer {
+  font-family: "Source Code Pro", serif;
+  font-size: 4rem;
+  font-weight: 300;
+  font-style: normal;
+  color: whitesmoke;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Reenie Beanie", serif;
+  background: #fff;
+  color: var(--color3);
+  line-height: 1.6;
+}
+
+/* Headers with Big, Retro-Inspired Fonts */
+h1, h2 {
+  font-family: 'Lobster', cursive;
+}
+
+/* Header & Burger Menu */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+}
+.burger-menu {
+  position: relative;
+}
+.burger-icon {
+  width: 35px;
+  cursor: pointer;
+}
+.burger-icon span {
+  display: block;
+  height: 4px;
+  background: var(--color4);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+.menu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+.menu ul {
+  list-style: none;
+}
+.menu li {
+  margin: 10px 0;
+}
+.menu li a {
+  text-decoration: none;
+  color: var(--color4);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Hero Section with Background Image & Animation */
+.hero {
+  height: 100vh;
+  background: url('./public/abstract-hero.jpg') no-repeat center center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  /* Start scaled up for the animated reveal */
+  transform: scale(1.2);
+}
+.hero.animate-bg {
+  animation: heroBgScale 2s ease-out forwards;
+}
+@keyframes heroBgScale {
+  from { transform: scale(1.2); }
+  to { transform: scale(1); }
+}
+.hero h1 {
+  font-size: 4rem;
+  opacity: 1;
+}
+
+/* Intro Section */
+.intro {
+  padding: 80px 20px;
+  background: var(--color2);
+  text-align: center;
+}
+.intro h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--color3);
+}
+.intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: var(--color4);
+  color: var(--color3);
+}
+.portfolio-description {
+  flex: 1 1 400px;
+  padding: 20px;
+}
+.portfolio-description h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.portfolio-description p {
+  font-size: 1.5rem;
+}
+.portfolio-highlight {
+  flex: 1 1 400px;
+  padding: 20px;
+}
+.portfolio-highlight img {
+  width: 100%;
+  border: 5px solid var(--color3);
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+}
+.portfolio-highlight img:hover {
+  transform: scale(1.05);
+}
+
+/* Gallery Section – Creative, Random-Looking Grid */
+.gallery {
+  padding: 80px 20px;
+  background: var(--color1);
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+.gallery-grid .grid-item {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-grid .grid-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+.gallery-grid .grid-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 20px;
+  background: var(--color2);
+  text-align: center;
+}
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--color3);
+}
+.contact p {
+  font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .intro h2,
+  .portfolio-description h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .intro p,
+  .portfolio-description p,
+  .contact p {
+    font-size: 1.2rem;
+  }
+  .portfolio {
+    flex-direction: column;
+  }
+}
+
+/* Contact Form Container & Animation */
+.contact-form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  animation: slideInUp 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border: 2px solid var(--color3);
+  border-radius: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color3);
+  border-radius: 5px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Styled Submit Button */
+.contact-form button {
+  background: var(--color3);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: var(--color4);
+}
+
+/* Slide-In Animation for the Contact Form */
+@keyframes slideInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Footer Section - Always Visible */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  overflow: hidden; /* Hides overflow from the animated text */
+  z-index: 1000; /* Ensures footer stays on top */
+}
+
+.footer-text {
+  display: inline-block;
+  white-space: nowrap; /* Prevents text from wrapping */
+  animation: slideInRight 10s linear infinite;
+  font-size: 1.2rem;
+  color: var(--color3); /* Deep Indigo for contrast */
+}
+
+/* Animation: Translates text from left to right continuously */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 500px) {
+  #paragraph-font-footer {
+    font-family: "Source Code Pro", serif;
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: normal;
+    color: whitesmoke;
+  }
+}
+
+/* Logo styling */
+.logo {
+  position: fixed;
+  top: 30px;
+  left: 20px;
+  z-index: 1001; /* Ensure it's above other elements */
+  cursor: pointer;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+#floating-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 150px; /* Adjust the size as needed */
+  z-index: 1001; /* Ensure it stays above other elements */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Optional: round the corners a bit */
+}
+
+#floating-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farnoosh Portfolio</title>
+  <!-- Google Fonts: Lobster for headers and Roboto for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Reenie+Beanie&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header with Burger Menu -->
+  <header>
+    <div class="burger-menu">
+      <div class="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Works</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <a href="index.html" class="logo">
+    <img src="./public/logo.gif" alt="Logo" />
+  </a>
+
+  <div id="floating-image">
+    <img src="./public/bouncing-ball.gif" alt="Floating Art" />
+  </div>
+
+  <!-- Hero Section with Background Image -->
+  <section class="hero">
+    <h1 id="unique-font">Farnoosh Portfolio</h1>
+    <h3 id="paragraph-font"><br>1998, Toronto Based.</h3>
+  </section>
+
+  <!-- About Section -->
+  <section class="intro" id="about">
+    <h2 id="title-font">About Me</h2>
+    <p id="paragraph-font">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus at nunc vitae nisi dignissim volutpat. Curabitur euismod ante in ex sodales, nec laoreet velit tincidunt. Donec mollis nisl in eros egestas, at blandit lorem ultrices.
+    </p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="portfolio-description">
+      <h2 id="title-font">My Masterpieces</h2>
+      <p id="paragraph-font">
+        Each piece is a journey into a realm of colors and emotions. Explore my bold and creative works that capture the essence of artistic expression. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio velit repellat neque accusamus. Minus totam atque similique consequuntur earum perferendis itaque voluptatum nisi facilis aliquam accusantium, ab aliquid tenetur debitis.</br>
+      </p>
+      <p id="paragraph-font">
+        Each piece is a journey into a realm of colors and emotions. Explore my bold and creative works that capture the essence of artistic expression. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio velit repellat neque accusamus. Minus totam atque similique consequuntur earum perferendis itaque voluptatum nisi facilis aliquam accusantium, ab aliquid tenetur debitis.
+      </p>
+    </div>
+    <div class="portfolio-highlight">
+      <img src="./public/boom.gif" alt="Featured Artwork" />
+    </div>
+  </section>
+
+  <!-- Gallery Section with Creative, Randomly Animated Images -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-grid">
+      <div class="grid-item"><img src="./public/111.jfif" alt="Artwork 1" /></div>
+      <div class="grid-item"><img src="./public/112.jfif" alt="Artwork 2" /></div>
+      <div class="grid-item"><img src="./public/tv.gif" alt="Artwork 3" /></div>
+      <div class="grid-item"><img src="./public/113.jfif" alt="Artwork 4" /></div>
+      <div class="grid-item"><img src="./public/114.jfif" alt="Artwork 5" /></div>
+      <div class="grid-item"><img src="./public/vibration.gif" alt="Artwork 6" /></div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2 id="title-font">Contact</h2>
+    <p id="paragraph-font">
+      Feel free to reach out for commissions or collaborations.
+    </p>
+    <div class="contact-form-container">
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer Section with Animated Lorem -->
+  <footer>
+    <p class="footer-text" id="paragraph-font-footer">
+      Contact No. +1 123 456 7890 Email: farnoosh.paint@yahoo.com Address: 1234 Art Street, Toronto, ON, Canada
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
