@@ -302,25 +302,24 @@ footer {
   width: 100%;
   padding: 20px 0;
   text-align: center;
-  overflow: hidden; /* Hides overflow from the animated text */
   z-index: 1000; /* Ensures footer stays on top */
 }
 
 .footer-text {
   display: inline-block;
   white-space: nowrap; /* Prevents text from wrapping */
-  animation: slideInRight 10s linear infinite;
+  animation: slideInLeft 10s linear infinite;
   font-size: 1.2rem;
   color: var(--color3); /* Deep Indigo for contrast */
 }
 
-/* Animation: Translates text from left to right continuously */
-@keyframes slideInRight {
+/* Animation: Translates text from right to left continuously */
+@keyframes slideInLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
 }
 

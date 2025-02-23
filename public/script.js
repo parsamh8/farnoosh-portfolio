@@ -98,3 +98,4 @@ function animateFloatingImage() {
 document.addEventListener("DOMContentLoaded", () => {
   animateFloatingImage();
 });
+
